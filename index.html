@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy Birthday!</title>
+    <style>
+        /* CSS for animation */
+        @keyframes confetti {
+            0% { transform: translate3d(0, -100%, 0); }
+            100% { transform: translate3d(0, 100%, 0); }
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* CSS for birthday message */
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f59ade;
+            background-image: url(background_img.jpg);
+            background-size: cover;
+            background-position: center ;
+           
+        }
+        
+        h1 {
+            /* font-family: Arial, sans-serif; */
+            text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+            text-align: center;
+            font-size: 100px;
+            font-display: auto;
+            font-style:italic;
+            color: #fcfc07e1;
+            margin-bottom: 30px;
+            animation: rotate 9s infinite linear;
+        }
+        
+        .photo-container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+        }
+        
+        .photo {
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid black;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: confetti 4s infinite ease-in-out;
+        }
+        .balloon1 img {
+            width: 100%;
+        }
+        .balloon2 img {
+            width: 100%;
+        }
+        .balloon3 img {
+            width: 100%;
+        }
+        .balloon4 img {
+            width: 100%;
+        }
+        
+        .balloon1 {
+            position: absolute;
+            /* width: 80px; */
+            width: 100%;
+            border-radius: 40%;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: confetti 4s infinite ease-in-out;
+        }
+        
+
+        .balloon2{
+
+            position: absolute;
+            /* width: 80px; */
+            width: 100%;
+            border-radius: 40%;
+            top: 10%;
+            right: 50%;
+            transform: translateX(-70%);
+            animation: confetti 4s infinite ease-in ;
+
+        }
+        .balloon3{
+            position:absolute;
+            /* width: 80px; */
+            width: 100%;
+            border-radius: 40%;
+            top: 10%;
+            right: 50%;
+            transform: translateX(-60%);
+            animation: confetti 4s infinite ease-out;
+
+        }
+        .balloon4{
+            position: absolute;
+            /* width: 80px; */
+            width: 100%;
+            border-radius: 40%;
+            top: 60%;
+            right: 90%;
+            transform: translateX(-90%);
+            animation: confetti 4s infinite ;
+
+        }
+    </style>
+</head>
+<body>
+    <!-- add controls using "controls" , muted  attributes  -->
+    <!-- autoplay wasnt working ,so added controls -->
+    <audio controls autoplay loop >  
+        <source src="song1.mp3" type="audio/mpeg">
+    </audio>
+    <div class="container">
+        <h1>Happy Birthday !</h1>
+        
+        <div class="photo-container">
+            <img class="photo" src="parul.jpeg" alt="Birthday Photo">
+            <img class="balloon1" src="b1.png" alt="Balloon">
+            <img class="balloon2" src="b3.png" alt="Balloon">
+            <img class="balloon3" src="b2.png" alt="Balloon">
+            <img class="balloon4" src="b4.png" alt="Balloon">
+
+        </div>
+    </div>
+</body>
+</html>
